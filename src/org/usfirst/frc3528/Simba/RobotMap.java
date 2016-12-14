@@ -37,6 +37,7 @@ public class RobotMap {
     public static RobotDrive driveTraintankDrive;
     public static Compressor driveTrainCompressor;
     public static DoubleSolenoid driveTrainShifter;
+    public static DoubleSolenoid pistonThing;
     public static CameraServer server;
     public static ADXRS450_Gyro gyro;
     public static ADXL362 accel;
@@ -70,7 +71,8 @@ public class RobotMap {
         driveTrainCompressor = new Compressor(1);
         
         
-        driveTrainShifter = new DoubleSolenoid(1, 1, 2);      
+        driveTrainShifter = new DoubleSolenoid(1, 1, 2);  
+        pistonThing = new DoubleSolenoid(1, 1, 2);      
         LiveWindow.addActuator("GearShifter", "driveTrainShifter", driveTrainShifter);
         
         gyro = new ADXRS450_Gyro();
